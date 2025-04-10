@@ -1,0 +1,12 @@
+<div class="form-header">
+  <h3>Enter new artist information below</h3>
+</div>
+
+<form (ngSubmit)="submitForm()" #formRef="ngForm" class="artist-form">
+  <input type="text" placeholder="Name" [(ngModel)]="newArtist.name" name="name" required class="input-field">
+  <input type="text" placeholder="Image URL" [(ngModel)]="newArtist.imageUrl" name="imageUrl" required class="input-field">
+  <textarea placeholder="Description" [(ngModel)]="newArtist.description" name="description" required class="textarea-field"></textarea>
+
+  <button type="submit" [disabled]="formRef.invalid" class="submit-btn">Add Artist</button>
+</form>
+

@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding: 2rem;
+  background-color: #111;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f5c518;
+  text-shadow: 0 0 8px #ff0000;
+  margin-bottom: 2rem;
+}
+
+.artist-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}

@@ -1,3 +1,15 @@
-<h1>{{title}}</h1>
-<app-homepage></app-homepage>
-<artists-list></artists-list>
+<header class="navbar">
+  <h1 class="fest-title">Chinchilla Chaos Fest</h1>
+  <nav class="nav-links">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/artists" routerLinkActive="active">Line-up</a>
+  </nav>
+</header>
+
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Chinchilla Chaos Fest — Fluff meets Fury.</p>
+</footer>

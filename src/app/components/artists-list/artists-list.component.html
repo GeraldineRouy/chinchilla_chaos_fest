@@ -1,2 +1,13 @@
 <h2>{{ title }}</h2>
-<p>Oh wow !</p>
+
+<div class="artist-list">
+
+  <artist
+    *ngFor="let artist of artistList"
+    [artist]="artist"
+    (artistDeleted)="deleteArtist(artist)">
+  </artist>
+
+  <artist-form (artistAdded)="addArtist($event)"></artist-form>
+
+</div>
