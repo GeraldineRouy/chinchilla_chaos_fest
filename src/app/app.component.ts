@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {RouterModule, RouterOutlet} from '@angular/router';
 import {HomepageComponent} from './components/homepage/homepage.component';
-import {ArtistsListComponent} from './components/artists-list/artists-list.component';
+import {ArtistsListComponent} from './components/artists/artists-list/artists-list.component';
 
 @Component({
   selector: 'app-root',

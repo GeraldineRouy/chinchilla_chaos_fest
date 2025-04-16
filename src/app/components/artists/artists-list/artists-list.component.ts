@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {ArtistComponent} from '../artist/artist.component';
 import {NgFor} from '@angular/common';
-import {Artist} from '../artist/artist';
+import {Artist} from '../models/artist';
 import {ArtistFormComponent} from '../artist-form/artist-form.component';
 
 @Component({

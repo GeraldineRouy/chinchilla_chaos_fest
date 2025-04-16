@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Artist } from './artist';
+import { Artist } from '../models/artist';
 import { NgIf } from '@angular/common';
 
 @Component({
