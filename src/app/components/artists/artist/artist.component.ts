@@ -6,6 +6,7 @@ import { NgIf } from '@angular/common';
   selector: 'artist',
   imports: [NgIf],
   templateUrl: './artist.component.html',
+  standalone: true,
   styleUrl: './artist.component.css'
 })
 export class ArtistComponent {

@@ -1,10 +1,9 @@
 <div class="artist-card" [class.burn-out]="isDeleting">
 
-  <img [src]="artist.imageUrl" [alt]="artist.name" class="artist-img" />
+  <img [src]="artist.photo" [alt]="artist.name" class="artist-img" />
 
   <div class="artist-info">
     <h3 class="artist-name">{{ artist.name }}</h3>
-    <p class="artist-desc">{{ artist.description }}</p>
   </div>
 
   <button (click)="clickButtonToDelete()" class="delete-btn">Delete artist</button>

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {ArtistComponent} from '../artist/artist.component';
 import {NgFor} from '@angular/common';
 import {Artist} from '../models/artist';
 import {ArtistFormComponent} from '../artist-form/artist-form.component';
+import {ArtistService} from '../service/artist.service';
 
 @Component({
   selector: 'artists-list',
@@ -11,11 +12,28 @@ import {ArtistFormComponent} from '../artist-form/artist-form.component';
     NgFor,
     ArtistFormComponent
   ],
-  templateUrl: './artists-list.component.html',
+  template: `
+    <h2>{{this.title}}</h2>
+    @for (artist of artists() ; track artist.id) {
+      <artist class="artist-list" [artist]="artist" ></artist>
+    }
+    <artist-form></artist-form>
+  `,
+  //templateUrl: './artists-list.component.html',
+  standalone: true,
   styleUrl: './artists-list.component.css'
 })
-export class ArtistsListComponent {
+export class ArtistsListComponent implements OnInit {
+  private artistService: ArtistService = inject(ArtistService);
+  artists = this.artistService.artists;
   title: string = '2025 Artists';
+
+  ngOnInit() {
+    this.artistService.getArtists().subscribe();
+  }
+
+  /*
+
   artistList: Artist[] = [
     {
       id: 0,
@@ -71,6 +89,6 @@ export class ArtistsListComponent {
       this.artistList.splice(index, 1);
     }
   }
-
+   */
 
 }
