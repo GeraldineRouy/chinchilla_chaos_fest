@@ -1,4 +1,17 @@
-# MyVeryFirstAngularApp
+# Welcome to my very first Angular project!
+
+
+
+## What is this?
+
+This is a simple Single Page Application to promote the famous Chinchilla Chaos Festival!
+You can see the line-up and you can add your favorite artist.
+You can also delete artists if some of them bother you...
+
+## Why?
+
+Because I want to learn Angular, I started with a simple and fun project.
+You can see it as a first approach to the framework and its specific features.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
 
